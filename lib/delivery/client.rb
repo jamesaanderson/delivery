@@ -26,5 +26,11 @@ module Delivery
       response = self.class.get("#{base_uri}/merchant/#{id}", options)
       Hashie::Mash.new(JSON.parse(response.body))
     end
+
+    def menu id
+      options = {query: {client_id: client_id}}
+      response = self.class.get("#{base_uri}/merchant/#{id}/menu", options)
+      Hashie::Mash.new(JSON.parse(response.body))
+    end
   end
 end
