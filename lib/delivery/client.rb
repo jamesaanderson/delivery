@@ -15,22 +15,25 @@ module Delivery
       @base_uri = options[:base_uri]
     end
 
-    def search address
+    def search(address)
       options = {query: {client_id: client_id, address: address}}
       response = self.class.get("#{base_uri}/merchant/search/delivery", options)
       Hashie::Mash.new(JSON.parse(response.body))
     end
+    alias_method :merchant_search, :search
 
-    def info id
+    def info(id)
       options = {query: {client_id: client_id}}
       response = self.class.get("#{base_uri}/merchant/#{id}", options)
       Hashie::Mash.new(JSON.parse(response.body))
     end
+    alias_method :merchant_info, :info
 
-    def menu id
+    def menu(id)
       options = {query: {client_id: client_id}}
       response = self.class.get("#{base_uri}/merchant/#{id}/menu", options)
       Hashie::Mash.new(JSON.parse(response.body))
     end
+    alias_method :merchant_menu, :menu
   end
 end
