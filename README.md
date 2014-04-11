@@ -1,6 +1,6 @@
 # Delivery
 
-TODO: Write a gem description
+A Ruby interface to the Delivery.com API
 
 ## Installation
 
