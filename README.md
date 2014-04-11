@@ -18,7 +18,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+@client = Delivery::Client.new 'client_id'
+@client.search '199 Water St 10038'
+```
 
 ## Contributing
 
