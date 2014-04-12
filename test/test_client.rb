@@ -28,4 +28,12 @@ class TestClient < Minitest::Test
     menu = @client.menu 752
     assert_equal 'Monday Lunch Specials', menu.menu.first.name
   end
+
+  def test_hours
+    stub_request(:get, 'http://sandbox.delivery.com/merchant/752/hours?client_id=client_id').
+      to_return(body: fixture('hours.json'), headers: {content_type: 'application/json'})
+
+    hours = @client.hours 752
+    assert_equal 'Underground Pizza', hours.merchant_name
+  end
 end
