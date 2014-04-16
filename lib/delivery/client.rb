@@ -41,5 +41,6 @@ module Delivery
       response = self.class.get("#{base_uri}/merchant/#{id}/hours", options)
       Hashie::Mash.new(JSON.parse(response.body))
     end
+    alias_method :merchant_hours, :hours
   end
 end
