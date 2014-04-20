@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency 'minitest', '~> 5.3.2'
   spec.add_development_dependency 'webmock', '~> 1.17.4'
+  spec.add_development_dependency 'coveralls', '~> 0.7.0'
 
   spec.add_dependency 'httparty', '~> 0.13.1'
   spec.add_dependency 'hashie', '~> 2.1.0'
