@@ -20,7 +20,11 @@ Or install it yourself as:
 
 ```ruby
 client = Delivery::Client.new 'client_id'
+
 client.search '199 Water St 10038'
+client.info 752
+client.menu 752
+client.hours 752
 ```
 
 ## Contributing
