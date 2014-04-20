@@ -1,4 +1,4 @@
-# Delivery [![Code Climate](https://codeclimate.com/github/jamesaanderson/delivery.png)](https://codeclimate.com/github/jamesaanderson/delivery)
+# Delivery [![Code Climate](https://codeclimate.com/github/jamesaanderson/delivery.png)](https://codeclimate.com/github/jamesaanderson/delivery) [![Build Status](https://travis-ci.org/jamesaanderson/delivery.svg)](https://travis-ci.org/jamesaanderson/delivery) [![Dependency Status](https://gemnasium.com/jamesaanderson/delivery.svg)](https://gemnasium.com/jamesaanderson/delivery)
 
 A Ruby interface to the Delivery.com API
 
