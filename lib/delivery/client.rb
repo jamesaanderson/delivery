@@ -16,31 +16,34 @@ module Delivery
     end
 
     def search(address, options={})
-      options = {query: {client_id: client_id, address: address}.merge(options)}
-      response = self.class.get("#{base_uri}/merchant/search/delivery", options)
-      Hashie::Mash.new(JSON.parse(response.body))
+      get('/merchant/search/delivery', {address: address}.merge(options))
     end
     alias_method :merchant_search, :search
 
     def info(id, options={})
-      options = {query: {client_id: client_id}.merge(options)}
-      response = self.class.get("#{base_uri}/merchant/#{id}", options)
-      Hashie::Mash.new(JSON.parse(response.body))
+      get("/merchant/#{id}", options)
     end
     alias_method :merchant_info, :info
 
     def menu(id, options={})
-      options = {query: {client_id: client_id}.merge(options)}
-      response = self.class.get("#{base_uri}/merchant/#{id}/menu", options)
-      Hashie::Mash.new(JSON.parse(response.body))
+      get("/merchant/#{id}/menu", options)
     end
     alias_method :merchant_menu, :menu
 
     def hours(id, options={})
-      options = {query: {client_id: client_id}.merge(options)}
-      response = self.class.get("#{base_uri}/merchant/#{id}/hours", options)
-      Hashie::Mash.new(JSON.parse(response.body))
+      get("/merchant/#{id}/hours", options)
     end
     alias_method :merchant_hours, :hours
+
+    private
+
+    def get(path, options={})
+      http_verb :get, path, options
+    end
+
+    def http_verb(verb, path, options={})
+      response = self.class.send(verb, "#{base_uri}#{path}", {query: {client_id: client_id}.merge(options)})
+      Hashie::Mash.new(JSON.parse(response.body))
+    end
   end
 end
