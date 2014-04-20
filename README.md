@@ -1,4 +1,4 @@
-# Delivery
+# Delivery [![Code Climate](https://codeclimate.com/github/jamesaanderson/delivery.png)](https://codeclimate.com/github/jamesaanderson/delivery)
 
 A Ruby interface to the Delivery.com API
 
