@@ -1,4 +1,6 @@
-# Delivery [![Gem Version](https://badge.fury.io/rb/delivery.svg)](http://badge.fury.io/rb/delivery) [![Code Climate](https://codeclimate.com/github/jamesaanderson/delivery.png)](https://codeclimate.com/github/jamesaanderson/delivery) [![Build Status](https://travis-ci.org/jamesaanderson/delivery.svg)](https://travis-ci.org/jamesaanderson/delivery) [![Dependency Status](https://gemnasium.com/jamesaanderson/delivery.svg)](https://gemnasium.com/jamesaanderson/delivery) [![Coverage Status](https://coveralls.io/repos/jamesaanderson/delivery/badge.png)](https://coveralls.io/r/jamesaanderson/delivery)
+# Delivery
+
+[![Gem Version](https://badge.fury.io/rb/delivery.svg)](http://badge.fury.io/rb/delivery) [![Code Climate](https://codeclimate.com/github/jamesaanderson/delivery.png)](https://codeclimate.com/github/jamesaanderson/delivery) [![Build Status](https://travis-ci.org/jamesaanderson/delivery.svg)](https://travis-ci.org/jamesaanderson/delivery) [![Dependency Status](https://gemnasium.com/jamesaanderson/delivery.svg)](https://gemnasium.com/jamesaanderson/delivery) [![Coverage Status](https://coveralls.io/repos/jamesaanderson/delivery/badge.png)](https://coveralls.io/r/jamesaanderson/delivery)
 
 A Ruby interface to the Delivery.com API
 
